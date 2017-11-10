@@ -4,31 +4,41 @@
 	margin: auto;
 	font-family: cursive;
 }
+#play-game{
+  width: 30%;
+  padding: 1.5%;
+}
 .margin-above{
 	margin-top: 10%;
 }
 #game-status{
-	font-size: 1.6vw;
+	font-size: 1.2vw;
 	float: left;
 }
 #reset-game{
 	float: right;
+  padding: 1%;
+  width: 30%;
 }
 #game-title{
 	font-size: 4.0vw;
 	text-align: center;
 }
 .selector{
-	font-size: 1.6vw;
+	font-size: 1.2vw;
 	margin-top: 10%;
 }
 .selector select{
-	width: 50%;
-	height: 5%;
+	width: 30%;
+	padding: 1%;
 }
 #player-names{
 	margin-top: 10%;
-	font-size: 1.6vw;
+	font-size: 1.2vw;
+}
+#player-names input{
+  text-align: center;
+  padding: 1%;
 }
 table{
 	width: 100%;
@@ -66,4 +76,9 @@ td:nth-of-type(3){
 }
 tr:nth-of-type(3) td{
 	border-bottom-color: transparent;
+}
+#game-notification{
+  font-size: 1.6vw;
+  text-align: center;
+  color: green;
 }

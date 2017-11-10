@@ -15,9 +15,15 @@ Board.prototype.addListeners = function(game){
 		$(this).find("div").html(game.turn.sign).css("color", game.turn.color);
 		var cellNumber = $(this).attr("id").split('_')[1];
 		board.update(cellNumber, game.turn.sign);
-		game.switchTurn();
+  	game.switchTurn();  
+    game.sync();	
 	});
 };
+
+Board.prototype.computerMove = function(i, player){
+  $("#cell_"+i).find("div").html(player.sign).css("color", player.color);
+  this.update(i, player.sign);
+}
 
 Board.prototype.freeze = function(){
 	$("td").css('pointer-events','none');
