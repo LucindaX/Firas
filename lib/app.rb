@@ -16,6 +16,7 @@ class App < Sinatra::Base
   end
 
   post '/move' do
+
     # { board: { '1': 'X', .... }, player: 'O' }
     content_type :json
     data = parse request.body.read
@@ -35,7 +36,14 @@ class App < Sinatra::Base
       return { state: 2 }.to_json
     end
 
-    { move: game.next_move(data["player"]) , state: 3 }.to_json
+    next_move = game.next_move(data["player"])
+    game.play(next_move)
+    state = game.state
+
+    hash = { move: next_move, state: state }
+    hash["winner"] = game.winner if state == 1
+
+    hash.to_json
 
   end
 

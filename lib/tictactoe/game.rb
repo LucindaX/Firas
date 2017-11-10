@@ -26,6 +26,10 @@ module Tictactoe
 			end
 		end
 
+		def play(n)
+			@board.check(@turn, n)
+		end
+
 		private
 		
 		def reset
@@ -34,10 +38,6 @@ module Tictactoe
 
 		def switch_turn
 			@turn = ( @turn == @p1 ? @p2 : @p1 )
-		end
-
-		def play(n)
-			@board.check(@turn, n)
 		end
 
 		def possible_moves
