@@ -1,7 +1,8 @@
 $LOAD_PATH.push File.dirname(__FILE__)
 
 require 'sinatra/base'
-require 'json'
+require 'tictactoe/board'
+require 'helpers/application_helpers'
 
 class App < Sinatra::Base
 
@@ -13,9 +14,11 @@ class App < Sinatra::Base
     send_file File.join(settings.public_folder, 'index.html')
   end
 
-  get '/next_move' do
-  
+  post '/move' do
+    # { board: { '1': 'X', .... }, player: 'O' }
+    content_type :json
   end
 
+  helpers ApplicationHelpers
 
 end
