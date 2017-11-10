@@ -87,7 +87,7 @@ module Tictactoe
 				@board.reset(move)
 			end 
 			
-			if sign == @turn
+      if sign == @turn
 				max_index = scores.each_with_index.max[1]
 				return depth == 0 ? moves[max_index] : scores[max_index]
 			else
@@ -98,7 +98,7 @@ module Tictactoe
 
 		def score(depth=0)
 			return 10-depth if won?(@turn)
-			return depth-10 if !won?(@turn)
+			return depth-10 if won?(@turn == "X" ? "O" : "X")
 			0
 		end
 

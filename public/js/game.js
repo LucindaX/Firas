@@ -24,6 +24,7 @@ Game.prototype.reset = function(){
 	this.board.clear();
 	this.board.removeListeners();
 	this.board.addListeners(this);
+  if (this.mode == 1 && this.turn == this.players[1]) this.sync();
 }
 
 Game.prototype.notification = function(msg){
