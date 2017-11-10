@@ -1,0 +1,69 @@
+#main{
+	margin-top: 5%;
+	width: 20%;
+	margin: auto;
+	font-family: cursive;
+}
+.margin-above{
+	margin-top: 10%;
+}
+#game-status{
+	font-size: 1.6vw;
+	float: left;
+}
+#reset-game{
+	float: right;
+}
+#game-title{
+	font-size: 4.0vw;
+	text-align: center;
+}
+.selector{
+	font-size: 1.6vw;
+	margin-top: 10%;
+}
+.selector select{
+	width: 50%;
+	height: 5%;
+}
+#player-names{
+	margin-top: 10%;
+	font-size: 1.6vw;
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+td{
+	width: 33.33%;
+	border: 6px solid #222;
+	position: relative;
+	cursor: pointer;
+}
+td div{
+	position: absolute;
+	left: 40%;
+	top: 25%;
+	font-size: 2.1vw;
+	pointer: cursor;
+}
+td::after{
+	display: block;
+	margin-top: 100%;
+	content: ' ';
+}
+td:first-of-type{
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+td:nth-of-type(2){
+	border-top-color: transparent;
+}
+
+td:nth-of-type(3){
+	border-top-color: transparent;
+	border-right-color: transparent;
+}
+tr:nth-of-type(3) td{
+	border-bottom-color: transparent;
+}
