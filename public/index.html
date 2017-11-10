@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<script src="/js/vendor/jquery-3.2.1.min.js"></script>
+		<script src="/js/game.js"></script>
+		<script src="/js/player.js"></script>
+		<script src="/js/board.js"></script>
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<div id="main">
+			<div id="game-title"> TicTacToe </div>
+			<div id="game-notification"></div>
+			<div id="game-setup">
+				<div id="game-mode" class="selector"> 
+					Select Mode :
+					<select id="player-select">
+						<option value="1"> 1 player </option>
+						<option value="2"> 2 players </option>
+					</select>
+				</div>
+				<div id="player-names">
+					Enter Your Name: <input type='text' name='player1'><br>
+				</div>
+				<div id="who-starts" class="selector">
+					Who Starts :
+					<select id="starting-player">
+						<option value=1> You </option>
+						<option value=2> Opponent/Computer </option>
+					</select>
+				</div>
+				<button id="play-game" class="margin-above">Play</button>
+			</div>
+			<div id="game" class="margin-above" style="display: none">
+				<table id="board">
+					<tr>
+						<td id="cell_1"><div></div></td>
+						<td id="cell_2"><div></div></td>
+						<td id="cell_3"><div></div></td>
+					</tr>
+					<tr>
+						<td id="cell_4"><div></div></td>
+						<td id="cell_5"><div></div></td>
+						<td id="cell_6"><div></div></td>
+					</tr>
+					<tr>
+						<td id="cell_7"><div></div></td>
+						<td id="cell_8"><div></div></td>
+						<td id="cell_9"><div></div></td>
+					</tr>
+				</table>
+				<div id="options" class="margin-above">
+					<div id="game-status">Turn: <span id="player-turn"></span></div>
+					<button id="reset-game">Reset</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="/js/main.js"></script>
+</html>
