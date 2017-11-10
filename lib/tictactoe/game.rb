@@ -1,12 +1,12 @@
 module Tictactoe
 
 	class Game
-
+    attr_reader :winner
 		def initialize(board=nil)
 			@board = board || Board.new
 			@p1 = "X"
 			@p2 = "O"
-			@won = nil
+			@winner = nil
 		end
 
 		def next_move(sign)
@@ -17,7 +17,7 @@ module Tictactoe
 		def state
 			state = over?
 			if state == @p1 || state == @p2
-				@won = state
+				@winner = state
 				1
 			elsif state
 				2
