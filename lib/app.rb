@@ -47,6 +47,22 @@ class App < Sinatra::Base
 
   end
 
+  post '/state' do
+  
+    content_type :json
+    data = parse request.body.read
+    bad_request if data["board"].nil?
+    
+    board = Tictactoe::Board.new(data["board"])
+    game = Tictactoe::Game.new(board)
+
+    state = game.state
+ 
+    return { state: 1, winner: game.winner }.to_json if state == 1
+    { state: state }.to_json
+
+  end
+
   helpers ApplicationHelpers
 
 end
