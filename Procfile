@@ -1,2 +1,2 @@
-web: rackup -E production -D -s thin
+web: rackup -E production -s thin
 
